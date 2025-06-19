@@ -1,0 +1,174 @@
+.dashboard-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.dashboard-card .card-body {
+    padding: 1.5rem;
+}
+
+.dashboard-card .card-icon {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    font-size: 2rem;
+}
+
+.card-warga .card-icon {
+    background-color: rgba(13, 110, 253, 0.15);
+    color: #0d6efd;
+}
+
+.card-rumah .card-icon {
+    background-color: rgba(25, 135, 84, 0.15);
+    color: #198754;
+}
+
+.card-pengumuman .card-icon {
+    background-color: rgba(255, 193, 7, 0.15);
+    color: #ffc107;
+}
+
+.card-kegiatan .card-icon {
+    background-color: rgba(13, 202, 240, 0.15);
+    color: #0dcaf0;
+}
+
+.dashboard-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.dashboard-card .card-text {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0;
+    letter-spacing: -0.5px;
+}
+
+/* Status document cards */
+.status-card {
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.status-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.status-card .card-body {
+    padding: 1.5rem;
+}
+
+.status-waiting {
+    background: linear-gradient(145deg, #ffffff, #fff8e1);
+    border-bottom: 4px solid #ffc107;
+}
+
+.status-review {
+    background: linear-gradient(145deg, #ffffff, #e1f5fe);
+    border-bottom: 4px solid #17a2b8;
+}
+
+.status-approved {
+    background: linear-gradient(145deg, #ffffff, #e8f5e9);
+    border-bottom: 4px solid #28a745;
+}
+
+.status-rejected {
+    background: linear-gradient(145deg, #ffffff, #ffebee);
+    border-bottom: 4px solid #dc3545;
+}
+
+.status-icon {
+    height: 70px;
+    width: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    margin: 0 auto 1rem auto;
+    font-size: 2rem;
+}
+
+.status-waiting .status-icon {
+    background-color: rgba(255, 193, 7, 0.15);
+    color: #ffc107;
+}
+
+.status-review .status-icon {
+    background-color: rgba(23, 162, 184, 0.15);
+    color: #17a2b8;
+}
+
+.status-approved .status-icon {
+    background-color: rgba(40, 167, 69, 0.15);
+    color: #28a745;
+}
+
+.status-rejected .status-icon {
+    background-color: rgba(220, 53, 69, 0.15);
+    color: #dc3545;
+}
+
+.status-card .btn {
+    border-radius: 30px;
+    padding: 0.375rem 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.status-card .btn:hover {
+    transform: translateY(-3px);
+}
+
+/* Section headers */
+.section-header {
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.section-header::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 50px;
+    background-color: #17a2b8;
+}
+
+/* Card counter animation */
+.counter-animation {
+    animation: countUp 2s ease-out forwards;
+}
+
+@keyframes countUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

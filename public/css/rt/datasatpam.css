@@ -1,0 +1,464 @@
+/* Data Satpam Styles */
+.card-header {
+    background-color: #f8f9fc;
+    border-bottom: 1px solid #e3e6f0;
+    padding: 1.25rem;
+}
+
+/* Modern Table Styles */
+.table {
+    border-collapse: separate;
+    border-spacing: 0;
+    width: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.table thead th {
+    background-color: #4e73df !important;
+    color: #fff !important;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.03em;
+    border: none !important;
+    padding: 15px 18px;
+    vertical-align: middle;
+}
+
+.table tbody tr {
+    transition: all 0.2s ease;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.table tbody tr td {
+    padding: 12px 18px;
+    vertical-align: middle;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    border-bottom: 1px solid #f0f0f0;
+    font-size: 0.9rem;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(78, 115, 223, 0.07);
+    transform: translateY(-1px);
+}
+
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(78, 115, 223, 0.03);
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+}
+
+.action-buttons .btn {
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    line-height: 32px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    transition: all 0.2s;
+}
+
+.action-buttons .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.action-buttons .btn i {
+    font-size: 14px;
+}
+
+.action-buttons .btn-warning {
+    background-color: #f6c23e;
+    border-color: #f6c23e;
+}
+
+.action-buttons .btn-warning:hover {
+    background-color: #dda20a;
+    border-color: #dda20a;
+}
+
+.action-buttons .btn-danger {
+    background-color: #e74a3b;
+    border-color: #e74a3b;
+}
+
+.action-buttons .btn-danger:hover {
+    background-color: #be2617;
+    border-color: #be2617;
+}
+
+.action-buttons .btn-info {
+    background-color: #36b9cc;
+    border-color: #36b9cc;
+}
+
+.action-buttons .btn-info:hover {
+    background-color: #258391;
+    border-color: #258391;
+}
+
+.btn-primary {
+    background-color: #4e73df;
+    border-color: #4e73df;
+    border-radius: 5px;
+    padding: 8px 16px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    box-shadow: 0 2px 8px rgba(78, 115, 223, 0.25);
+    transition: all 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: #2e59d9;
+    border-color: #2e59d9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(78, 115, 223, 0.35);
+}
+
+.modal-header.bg-primary {
+    background-color: #4e73df !important;
+    border-radius: 8px 8px 0 0;
+}
+
+.modal-content {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom Scrollbar */
+.table-responsive::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.table-responsive::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.table-responsive::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* Form Styles */
+.form-control {
+    border-radius: 5px;
+    padding: 10px 15px;
+    border: 1px solid #e3e6f0;
+    transition: all 0.2s;
+}
+
+.form-control:focus {
+    border-color: #4e73df;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+}
+
+/* Enhanced DataTables Styling */
+.dataTables_wrapper .dataTables_length select {
+    min-width: 65px;
+    border-radius: 5px;
+    border: 1px solid #e3e6f0;
+    padding: 5px 10px;
+    background-color: white;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    border-radius: 50px;
+    border: 1px solid #e3e6f0;
+    padding: 8px 15px 8px 40px;
+    width: 300px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="%234e73df" class="bi bi-search" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: 15px center;
+    background-size: 16px;
+    transition: all 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.dataTables_wrapper .dataTables_filter input:focus {
+    outline: none;
+    border-color: #4e73df;
+    box-shadow: 0 0 0 0.2rem rgba(78, 115, 223, 0.25);
+    width: 350px;
+}
+
+.dataTables_wrapper .dataTables_filter {
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.dataTables_wrapper .dataTables_info,
+.dataTables_wrapper .dataTables_paginate {
+    margin-top: 15px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button {
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button.current {
+    background: #4e73df !important;
+    color: white !important;
+    border: 1px solid #4e73df !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button:hover {
+    background: #eef2ff !important;
+    color: #4e73df !important;
+    border: 1px solid #eef2ff !important;
+}
+
+/* Export Buttons */
+.dt-buttons .btn-outline-secondary {
+    color: #6c757d;
+    border-color: #ced4da;
+    background-color: white;
+    margin-right: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.dt-buttons .btn-outline-secondary:hover {
+    background-color: #f8f9fa;
+    border-color: #6c757d;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.dt-button-collection {
+    padding: 8px 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15) !important;
+    border: none !important;
+}
+
+.dt-button-collection .dropdown-item {
+    padding: 8px 20px;
+    font-size: 0.9rem;
+    transition: background-color 0.2s;
+}
+
+.dt-button-collection .dropdown-item:hover {
+    background-color: #eef2ff;
+    color: #4e73df;
+}
+
+.dt-button-collection .dropdown-item i {
+    width: 20px;
+    text-align: center;
+    margin-right: 8px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start !important;
+        gap: 15px;
+    }
+    
+    .card-header button {
+        align-self: flex-start;
+    }
+    
+    .dataTables_wrapper .row {
+        margin-bottom: 15px;
+    }
+    
+    .dataTables_wrapper .dataTables_filter,
+    .dataTables_wrapper .dataTables_length {
+        text-align: left;
+        margin-bottom: 15px;
+    }
+    
+    .dt-buttons {
+        margin-bottom: 15px;
+        display: flex;
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 768px) {
+    .modal-dialog {
+        max-width: 95%;
+        margin: 1rem auto;
+    }
+    
+    .form-group.row {
+        margin-bottom: 1rem;
+        flex-direction: column;
+    }
+    
+    .col-form-label {
+        padding-bottom: 0.5rem;
+        text-align: left;
+    }
+    
+    .col-sm-9 {
+        width: 100%;
+    }
+    
+    .col-sm-3 {
+        width: 100%;
+        margin-bottom: 5px;
+    }
+    
+    .table tbody tr td {
+        padding: 15px;
+        font-size: 0.85rem;
+    }
+    
+    .action-buttons .btn {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+    
+    .action-buttons .btn i {
+        font-size: 12px;
+    }
+    
+    .dataTables_wrapper .dataTables_filter input {
+        width: 100%;
+    }
+    
+    .dataTables_wrapper .dataTables_filter input:focus {
+        width: 100%;
+    }
+    
+    .dataTables_wrapper .dataTables_paginate {
+        text-align: center;
+        margin: 15px 0;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .dataTables_wrapper .dataTables_info {
+        text-align: center;
+    }
+    
+    /* Better display for DataTables responsive */
+    table.dataTable.dtr-inline.collapsed>tbody>tr>td.dtr-control:before, 
+    table.dataTable.dtr-inline.collapsed>tbody>tr>th.dtr-control:before {
+        background-color: #4e73df;
+        border: 1.5px solid #fff;
+        box-shadow: 0 0 0.2rem rgba(78, 115, 223, 0.5);
+        height: 1.2em;
+        width: 1.2em;
+        line-height: 1.2em;
+        margin-top: -0.6em;
+        text-align: center;
+        text-indent: 0 !important;
+        font-family: 'Font Awesome 5 Free';
+        font-weight: 900;
+        content: "\f055";
+    }
+    
+    table.dataTable.dtr-inline.collapsed>tbody>tr.parent>td.dtr-control:before, 
+    table.dataTable.dtr-inline.collapsed>tbody>tr.parent>th.dtr-control:before {
+        background-color: #e74a3b;
+        content: "\f056";
+    }
+    
+    .dtr-details {
+        width: 100%;
+    }
+    
+    .dtr-details li {
+        display: flex;
+        padding: 8px 0;
+        border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .dtr-details .dtr-title {
+        font-weight: 600;
+        min-width: 120px;
+        position: relative;
+    }
+    
+    .dtr-details .dtr-title:after {
+        content: ":";
+        position: absolute;
+        right: 10px;
+    }
+    
+    .dtr-details .dtr-data {
+        flex: 1;
+        padding-left: 15px;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 576px) {
+    .card-body {
+        padding: 1rem 0.5rem;
+    }
+    
+    .table thead th {
+        padding: 10px;
+        font-size: 0.75rem;
+    }
+    
+    .table tbody tr td {
+        padding: 10px;
+        font-size: 0.8rem;
+    }
+    
+    .action-buttons {
+        flex-direction: row;
+        gap: 5px;
+    }
+    
+    .action-buttons .btn {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    
+    .dataTables_wrapper .dataTables_paginate .paginate_button {
+        padding: 0.3em 0.5em;
+    }
+    
+    .dataTables_wrapper .dataTables_length select {
+        margin-left: 0;
+        margin-right: 0;
+    }
+    
+    .dataTables_wrapper .dataTables_length,
+    .dataTables_wrapper .dataTables_filter {
+        float: none;
+        text-align: center;
+    }
+    
+    .modal-body {
+        padding: 1rem;
+    }
+    
+    .modal-footer {
+        padding: 0.75rem;
+    }
+    
+    .form-group.row {
+        margin-bottom: 0.75rem;
+    }
+    
+    .form-control {
+        padding: 8px 12px;
+        font-size: 0.9rem;
+    }
+}

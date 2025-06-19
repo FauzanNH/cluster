@@ -1,0 +1,645 @@
+/* Chat List Styles */
+.chat-list-container {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.chat-list {
+    margin-bottom: 0;
+}
+
+.chat-item {
+    padding: 15px;
+    transition: background-color 0.2s ease;
+    cursor: pointer;
+    border-left: none;
+    border-right: none;
+}
+
+.chat-item:hover {
+    background-color: #f8f9fa;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+}
+
+.avatar-container {
+    position: relative;
+}
+
+.status-indicator {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid white;
+    bottom: 0;
+    right: 0;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.status-indicator.bg-success {
+    background-color: #28a745 !important;
+    box-shadow: 0 0 0 2px rgba(40, 167, 69, 0.2), 0 0 10px rgba(40, 167, 69, 0.5);
+    animation: pulse-green 2s infinite;
+}
+
+.status-indicator.bg-secondary {
+    background-color: #6c757d !important;
+}
+
+@keyframes pulse-green {
+    0% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 6px rgba(40, 167, 69, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+    }
+}
+
+.status-text {
+    font-size: 11px;
+    display: block;
+    margin-top: 2px;
+    color: #6c757d;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.status-text:hover {
+    color: #ffffff;
+}
+
+.status-text .text-success {
+    color: #28a745 !important;
+    font-weight: 500;
+}
+
+.message-preview {
+    color: #6c757d;
+    font-size: 0.9rem;
+}
+
+/* Chat Detail Styles */
+.chat-header {
+    background-color: #0099ff;
+    color: white;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.chat-header .avatar {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.chat-header h5 {
+    margin-bottom: 0;
+    font-weight: 500;
+}
+
+.chat-header .status {
+    font-size: 0.8rem;
+    opacity: 0.8;
+}
+
+/* Contact List in Modal */
+.contact-list {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+/* Animation for new messages */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.new-message {
+    animation: fadeIn 0.3s ease-out;
+}
+
+/* Custom scrollbar for chat containers */
+.chat-list-container::-webkit-scrollbar,
+.chat-container::-webkit-scrollbar {
+    width: 6px;
+}
+
+.chat-list-container::-webkit-scrollbar-track,
+.chat-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.chat-list-container::-webkit-scrollbar-thumb,
+.chat-container::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 10px;
+}
+
+.chat-list-container::-webkit-scrollbar-thumb:hover,
+.chat-container::-webkit-scrollbar-thumb:hover {
+    background: #a1a1a1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+    .avatar {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .chat-item {
+        padding: 10px;
+    }
+    
+    .message-preview {
+        font-size: 0.8rem;
+    }
+}
+
+/* Message Options */
+.message-header {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 5px;
+}
+
+.message-options {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+}
+
+.message-bubble:hover .message-options {
+    opacity: 1;
+}
+
+.message-options .dropdown-toggle::after {
+    display: none;
+}
+
+.message-options .btn {
+    color: #999;
+}
+
+.message-options .btn:hover {
+    color: #666;
+}
+
+/* Document styling */
+.document-container {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 5px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Styling untuk ikon dokumen */
+.document-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #e9ecef;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* Styling untuk ikon di dalam container dokumen */
+.document-icon i {
+    font-size: 20px;
+    color: #0d6efd;
+}
+
+/* Styling untuk informasi dokumen */
+.document-info {
+    flex: 1;
+    min-width: 0;
+}
+
+/* Styling untuk nama dokumen */
+.document-name {
+    font-weight: 500;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 200px;
+    margin-bottom: 2px;
+    font-size: 14px;
+}
+
+/* Styling untuk ukuran dokumen */
+.document-size {
+    color: #6c757d;
+    font-size: 12px;
+}
+
+/* Styling untuk tombol aksi dokumen */
+.document-actions {
+    display: flex;
+    gap: 5px;
+    margin-left: auto;
+}
+
+.document-actions .btn {
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+.document-actions .btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive styling untuk dokumen pada layar kecil */
+@media (max-width: 576px) {
+    .document-container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .document-actions {
+        margin-left: 0;
+        margin-top: 8px;
+        width: 100%;
+        justify-content: flex-end;
+    }
+}
+
+/* Attachment menu */
+#attachmentMenu {
+    min-width: 200px;
+}
+
+#attachmentMenu .dropdown-item {
+    padding: 8px 15px;
+}
+
+#attachmentMenu .dropdown-item:hover {
+    background-color: #f1f9ff;
+}
+
+/* Notifikasi pesan baru */
+.new-message-notification {
+    position: absolute;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0099ff;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 14px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    display: none;
+    z-index: 100;
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translate(-50%, 20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(-50%, 0);
+    }
+}
+
+/* Reply Preview Styling */
+.reply-preview {
+    background-color: #f1f9ff;
+    border-left: 3px solid #0099ff;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.reply-preview-content {
+    flex: 1;
+    overflow: hidden;
+}
+
+.reply-preview-sender {
+    font-weight: 600;
+    color: #0099ff;
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.reply-preview-text {
+    color: #555;
+    font-size: 13px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 90%;
+}
+
+.reply-image {
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    object-fit: cover;
+}
+
+.reply-preview .btn-close {
+    font-size: 0.7rem;
+    padding: 0.2rem;
+}
+
+/* Reply in Message Styling */
+.reply-container {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 8px 8px 0 0;
+    padding: 8px;
+    margin-bottom: 5px;
+    border-left: 2px solid #0099ff;
+    font-size: 0.85em;
+    max-width: 90%;
+}
+
+.reply-container.reply-outgoing {
+    background-color: rgba(0, 153, 255, 0.08);
+    border-left-color: #0099ff;
+}
+
+.reply-container.reply-incoming {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-left-color: #999;
+}
+
+.reply-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.reply-text {
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.message-bubble .reply-image {
+    max-width: 40px;
+    max-height: 30px;
+    margin-bottom: 4px;
+    border-radius: 4px;
+}
+
+/* Styling untuk tombol kirim */
+.chat-send-btn {
+    background-color: #0099ff;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.chat-send-btn:hover {
+    background-color: #007acc;
+}
+
+.chat-send-btn:active {
+    transform: scale(0.95);
+}
+
+/* Styling untuk tombol kirim saat disabled */
+.chat-send-btn:disabled {
+    background-color: #b3e0ff;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Styling untuk spinner pada tombol kirim */
+.chat-send-btn .fa-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Styling untuk container input chat */
+.chat-input-container {
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #e9ecef;
+}
+
+/* Styling untuk wrapper input chat */
+.chat-input-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 24px;
+    padding: 5px 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling untuk input chat */
+.chat-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    padding: 10px;
+    resize: none;
+    max-height: 120px;
+    font-size: 14px;
+}
+
+/* Styling untuk tombol attachment */
+.chat-attachment-btn {
+    background: none;
+    border: none;
+    color: #6c757d;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.chat-attachment-btn:hover {
+    color: #0099ff;
+}
+
+/* Styling untuk container chat */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 150px);
+    background-color: #f8f9fa;
+    position: relative;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 15px;
+    background-color: #f8f9fa;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23e0e0e0' fill-opacity='0.4'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .chat-container {
+        height: calc(100vh - 120px);
+    }
+    
+    .chat-input-wrapper {
+        padding: 3px 8px;
+    }
+    
+    .chat-input {
+        padding: 8px;
+        font-size: 13px;
+    }
+    
+    .chat-send-btn, .chat-attachment-btn {
+        width: 36px;
+        height: 36px;
+        font-size: 16px;
+    }
+}
+
+/* Styling untuk container gambar pesan */
+.message-image-container {
+    position: relative;
+    display: inline-block;
+    margin: 5px 0;
+    max-width: 250px;
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #f0f0f0;
+}
+
+/* Styling untuk gambar dalam pesan */
+.message-image {
+    display: block;
+    max-width: 250px;
+    max-height: 200px;
+    border-radius: 8px;
+    transition: transform 0.2s ease;
+}
+
+/* Animasi zoom untuk gambar saat diklik */
+.message-image:active {
+    transform: scale(0.98);
+}
+
+/* Styling untuk upload status */
+.message-image-container.loading,
+.document-container.loading {
+    position: relative;
+    opacity: 0.8;
+}
+
+.message-image.uploading {
+    filter: blur(1px);
+}
+
+.upload-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    z-index: 2;
+}
+
+.image-placeholder {
+    width: 100%;
+    height: 120px;
+    background-color: #e9ecef;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+.image-placeholder i {
+    font-size: 48px;
+    color: #adb5bd;
+}
+
+.message-status.uploading {
+    color: #6c757d;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.3; }
+    50% { opacity: 1; }
+    100% { opacity: 0.3; }
+}
+
+/* Animasi untuk spinner */
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.spinner-border {
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    border: 0.2em solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    animation: spin 0.75s linear infinite;
+}
+
+.spinner-border-sm {
+    width: 1rem;
+    height: 1rem;
+    border-width: 0.15em;
+}
+
+/* Styling untuk pesan sementara */
+.temp-message .message-bubble {
+    opacity: 0.8;
+    border: 1px dashed #ccc;
+}
+
+.temp-message .message-time {
+    font-style: italic;
+    color: #999;
+}
